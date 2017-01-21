@@ -1,9 +1,0 @@
-language: csharp
-solution: blog.sln
-install: 
-    - sudo apt-get install -y gtk-sharp2
-    - nuget restore blog.sln
-    - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
-script: 
-    - xbuild /p:Configuration=Release blog/blog.sln
-    - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe .blog.Tests/bin/Release/blog.Tests.dll
