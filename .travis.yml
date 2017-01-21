@@ -1,8 +1,11 @@
 ﻿language: csharp
 solution: blog.sln
+
+script: 
+  - xbuild /p:Configuration=Debug blog.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
   - nuget restore blog.sln
 after_script:
-  - nunit-console blog.Tests/bin/Release/blog.Tests.dll
+  - nunit-console blog.Tests/bin/Debug/blog.Tests.dll
