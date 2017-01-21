@@ -1,5 +1,6 @@
 ﻿language: csharp
 solution: blog.sln
+sudo: required
 
 script: 
   - xbuild /p:Configuration=Debug blog.sln
